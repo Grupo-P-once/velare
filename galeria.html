@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | VELARE — Cortinas & Persianas Premium</title>
+    <meta name="description" content="Galería de instalaciones reales de VELARE. Cortinas y persianas en salas, recámaras, oficinas y más en León, Guanajuato.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/Captura_de_pantalla_2026-02-26_153201-removebg-preview.png">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-brand">
+        <img src="assets/Captura_de_pantalla_2026-02-26_153201-removebg-preview.png" alt="VELARE Logo">
+        <span class="nav-brand-text">Vel<span>are</span></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="galeria.html">Galería</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html" class="nav-cta">Cotización Gratis</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="page-hero-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Inicio</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Galería</span>
+        </nav>
+        <h1>Nuestro <span>Trabajo</span></h1>
+        <p>Cada instalación es una historia de transformación. Descubre cómo cambiamos espacios reales en León.</p>
+    </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="section section-galeria-full" style="padding-top: 60px;">
+
+    <!-- Filtros de categoría -->
+    <div class="gallery-filters reveal">
+        <button class="gallery-btn active" data-cat="all">Todos</button>
+        <button class="gallery-btn" data-cat="sala">Sala de Estar</button>
+        <button class="gallery-btn" data-cat="recamara">Recámara</button>
+        <button class="gallery-btn" data-cat="oficina">Oficina</button>
+        <button class="gallery-btn" data-cat="comedor">Comedor</button>
+        <button class="gallery-btn" data-cat="cocina">Cocina</button>
+    </div>
+
+    <!-- Grid de galería -->
+    <div class="galeria-masonry" id="galeriaGrid">
+
+        <div class="galeria-card reveal" data-cat="sala" onclick="openLightbox(0)" role="button" tabindex="0" aria-label="Ver: Sala de Estar">
+            <img src="assets/gallery/living-room.png" alt="Sala de estar con cortinas Sheer Elegance" loading="lazy">
+            <div class="galeria-card-overlay">
+                <div class="galeria-card-info">
+                    <span class="galeria-card-cat">Sala de Estar</span>
+                    <h3>Sheer Elegance Blanco Hueso</h3>
+                    <p>Residencial — Cañada del Refugio</p>
+                </div>
+                <i class="fas fa-expand-alt galeria-card-icon"></i>
+            </div>
+        </div>
+
+        <div class="galeria-card reveal" data-cat="recamara" onclick="openLightbox(1)" role="button" tabindex="0" aria-label="Ver: Recámara">
+            <img src="assets/gallery/bedroom.png" alt="Recámara con cortinas enrollables" loading="lazy">
+            <div class="galeria-card-overlay">
+                <div class="galeria-card-info">
+                    <span class="galeria-card-cat">Recámara</span>
+                    <h3>Enrollable Blackout Gris</h3>
+                    <p>Residencial — Lomas del Campestre</p>
+                </div>
+                <i class="fas fa-expand-alt galeria-card-icon"></i>
+            </div>
+        </div>
+
+        <div class="galeria-card reveal" data-cat="oficina" onclick="openLightbox(2)" role="button" tabindex="0" aria-label="Ver: Oficina">
+            <img src="assets/gallery/office.png" alt="Oficina con persianas verticales" loading="lazy">
+            <div class="galeria-card-overlay">
+                <div class="galeria-card-info">
+                    <span class="galeria-card-cat">Oficina</span>
+                    <h3>Verticales PVC Blanco</h3>
+                    <p>Comercial — Blvd. Torres Landa</p>
+                </div>
+                <i class="fas fa-expand-alt galeria-card-icon"></i>
+            </div>
+        </div>
+
+        <div class="galeria-card reveal" data-cat="comedor" onclick="openLightbox(3)" role="button" tabindex="0" aria-label="Ver: Comedor">
+            <img src="assets/gallery/dining.png" alt="Comedor con cortinas Panel Japonés" loading="lazy">
+            <div class="galeria-card-overlay">
+                <div class="galeria-card-info">
+                    <span class="galeria-card-cat">Comedor</span>
+                    <h3>Panel Japonés Beige</h3>
+                    <p>Residencial — Jardines del Moral</p>
+                </div>
+                <i class="fas fa-expand-alt galeria-card-icon"></i>
+            </div>
+        </div>
+
+        <div class="galeria-card reveal" data-cat="cocina" onclick="openLightbox(4)" role="button" tabindex="0" aria-label="Ver: Cocina">
+            <img src="assets/gallery/kitchen.png" alt="Cocina con enrollable screen" loading="lazy">
+            <div class="galeria-card-overlay">
+                <div class="galeria-card-info">
+                    <span class="galeria-card-cat">Cocina</span>
+                    <h3>Enrollable Screen 5%</h3>
+                    <p>Residencial — San Jerónimo</p>
+                </div>
+                <i class="fas fa-expand-alt galeria-card-icon"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="noResults" class="no-results" style="display:none;">
+        <i class="fas fa-images"></i>
+        <p>No hay imágenes en esta categoría aún.<br>¡Próximamente más proyectos!</p>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar">&times;</button>
+    <span class="lightbox-counter" id="lightboxCounter"></span>
+    <button class="lightbox-nav lightbox-prev" onclick="lightboxPrev()" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+    <div class="lightbox-inner">
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+        <div class="lightbox-caption" id="lightboxCaption">
+            <span class="lightbox-cat" id="lightboxCat"></span>
+            <h3 id="lightboxTitle"></h3>
+            <p id="lightboxPlace"></p>
+        </div>
+    </div>
+    <button class="lightbox-nav lightbox-next" onclick="lightboxNext()" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<!-- CTA -->
+<section class="section-cta-band">
+    <div class="cta-band-content reveal">
+        <h2>¿Te gustó lo que viste?</h2>
+        <p>Podemos hacer lo mismo en tu hogar u oficina. Cotización sin costo.</p>
+        <div class="cta-band-btns">
+            <a href="contacto.html" class="btn-gold">Quiero mi cotización</a>
+            <a href="https://wa.me/524778116501" target="_blank" class="btn-outline-light"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <p class="footer-brand">Vel<span>are</span></p>
+            <p class="footer-tagline">Cortinas & Persianas Premium</p>
+            <p class="footer-sub">Una empresa de <strong>Grupo P-ONCE</strong></p>
+        </div>
+        <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Productos</h4>
+            <ul>
+                <li><a href="productos.html#enrollables">Enrollables</a></li>
+                <li><a href="productos.html#sheer">Sheer Elegance</a></li>
+                <li><a href="productos.html#panel">Panel Japonés</a></li>
+                <li><a href="productos.html#vertical">Verticales PVC</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Blvd. Campestre 2910 L10<br>León, Guanajuato</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:4778116501">477 811 6501</a></p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/GrupoP11" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/grupo.p11/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/524778116501" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 VELARE. Todos los derechos reservados. | <span class="footer-link" onclick="openModal()">Aviso de Privacidad</span></p>
+    </div>
+</footer>
+
+<a href="https://wa.me/524778116501" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<div class="cookie-banner" id="cookieBanner">
+    <p>Utilizamos cookies para mejorar tu experiencia.</p>
+    <button onclick="acceptCookies()">Aceptar</button>
+</div>
+<div id="privacyModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h2>Aviso de Privacidad</h2>
+        <p><strong>VELARE — Grupo P-ONCE</strong> es responsable de sus datos personales conforme a la LFPDPPP. Contacto: jpepeponce200903@gmail.com</p>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+const galleryData = [
+    { src: 'assets/gallery/living-room.png', cat: 'Sala de Estar',  title: 'Sheer Elegance Blanco Hueso',   place: 'Residencial — Cañada del Refugio',   filter: 'sala' },
+    { src: 'assets/gallery/bedroom.png',     cat: 'Recámara',        title: 'Enrollable Blackout Gris',       place: 'Residencial — Lomas del Campestre',  filter: 'recamara' },
+    { src: 'assets/gallery/office.png',      cat: 'Oficina',         title: 'Verticales PVC Blanco',          place: 'Comercial — Blvd. Torres Landa',     filter: 'oficina' },
+    { src: 'assets/gallery/dining.png',      cat: 'Comedor',         title: 'Panel Japonés Beige',            place: 'Residencial — Jardines del Moral',   filter: 'comedor' },
+    { src: 'assets/gallery/kitchen.png',     cat: 'Cocina',          title: 'Enrollable Screen 5%',           place: 'Residencial — San Jerónimo',         filter: 'cocina' }
+];
+let visibleIndices = galleryData.map((_, i) => i);
+let currentLightboxIndex = 0;
+
+// Filtro
+document.querySelectorAll('.gallery-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        document.querySelectorAll('.gallery-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.cat;
+        const cards = document.querySelectorAll('.galeria-card');
+        visibleIndices = [];
+        cards.forEach((card, i) => {
+            const show = filter === 'all' || card.dataset.cat === filter;
+            card.style.display = show ? 'block' : 'none';
+            if (show) visibleIndices.push(i);
+        });
+        document.getElementById('noResults').style.display = visibleIndices.length === 0 ? 'flex' : 'none';
+    });
+});
+
+// Lightbox
+function openLightbox(globalIndex) {
+    currentLightboxIndex = visibleIndices.indexOf(globalIndex);
+    if (currentLightboxIndex === -1) currentLightboxIndex = 0;
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+}
+function lightboxNext() {
+    currentLightboxIndex = (currentLightboxIndex + 1) % visibleIndices.length;
+    updateLightbox();
+}
+function lightboxPrev() {
+    currentLightboxIndex = (currentLightboxIndex - 1 + visibleIndices.length) % visibleIndices.length;
+    updateLightbox();
+}
+function updateLightbox() {
+    const idx = visibleIndices[currentLightboxIndex];
+    const d = galleryData[idx];
+    document.getElementById('lightboxImg').src = d.src;
+    document.getElementById('lightboxImg').alt = d.title;
+    document.getElementById('lightboxCat').textContent = d.cat;
+    document.getElementById('lightboxTitle').textContent = d.title;
+    document.getElementById('lightboxPlace').textContent = d.place;
+    document.getElementById('lightboxCounter').textContent = `${currentLightboxIndex + 1} / ${visibleIndices.length}`;
+}
+document.getElementById('lightbox').addEventListener('click', e => {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+});
+document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('active')) return;
+    if (e.key === 'ArrowRight') lightboxNext();
+    if (e.key === 'ArrowLeft')  lightboxPrev();
+    if (e.key === 'Escape')     closeLightbox();
+});
+document.querySelectorAll('.galeria-card').forEach(card => {
+    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') card.click(); });
+});
+</script>
+</body>
+</html>

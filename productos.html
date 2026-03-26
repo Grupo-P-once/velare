@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | VELARE — Cortinas & Persianas Premium</title>
+    <meta name="description" content="Catálogo completo de cortinas y persianas VELARE: Enrollables, Sheer Elegance, Panel Japonés y Verticales PVC. Fabricadas a medida en León, Guanajuato.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/Captura_de_pantalla_2026-02-26_153201-removebg-preview.png">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-brand">
+        <img src="assets/Captura_de_pantalla_2026-02-26_153201-removebg-preview.png" alt="VELARE Logo">
+        <span class="nav-brand-text">Vel<span>are</span></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="galeria.html">Galería</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html" class="nav-cta">Cotización Gratis</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="page-hero-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Inicio</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Productos</span>
+        </nav>
+        <h1>Nuestra <span>Colección</span></h1>
+        <p>Soluciones premium fabricadas a medida. Cada producto diseñado para transformar tu espacio con elegancia y funcionalidad.</p>
+    </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip trust-strip-light">
+    <div class="trust-item">
+        <i class="fas fa-cut"></i>
+        <div><strong>Fabricadas a Medida</strong><span>para cada ventana</span></div>
+    </div>
+    <div class="trust-item">
+        <i class="fas fa-palette"></i>
+        <div><strong>200+ Colores</strong><span>y texturas disponibles</span></div>
+    </div>
+    <div class="trust-item">
+        <i class="fas fa-shipping-fast"></i>
+        <div><strong>Entrega Rápida</strong><span>instalación incluida</span></div>
+    </div>
+    <div class="trust-item">
+        <i class="fas fa-shield-alt"></i>
+        <div><strong>Garantía Total</strong><span>en todos los productos</span></div>
+    </div>
+</div>
+
+<!-- FILTROS -->
+<section class="section section-productos-full" style="padding-top: 80px;">
+    <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="enrollables">Enrollables</button>
+        <button class="filter-btn" data-filter="sheer">Sheer Elegance</button>
+        <button class="filter-btn" data-filter="panel">Panel Japonés</button>
+        <button class="filter-btn" data-filter="vertical">Verticales PVC</button>
+    </div>
+
+    <!-- ── Enrollables ── -->
+    <div class="producto-full-card reveal" id="enrollables" data-cat="enrollables">
+        <div class="prod-full-img">
+            <img src="assets/products/enrollables.png" alt="Cortinas Enrollables" loading="lazy">
+            <div class="prod-badge">Más vendido</div>
+        </div>
+        <div class="prod-full-body">
+            <span class="section-label">Control de Luz</span>
+            <h2>Enrollables</h2>
+            <p class="prod-full-desc">El sistema de cortinas más versátil del mercado. Con un mecanismo simple de cadena o motorizado, controlas la entrada de luz con precisión. Disponibles en tela screen para filtrar la luz conservando la vista exterior, o blackout para oscuridad total.</p>
+            <div class="prod-specs">
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Tipos de tela</strong><span>Screen 3%, 5%, 10% | Blackout | Translúcida</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Mecanismo</strong><span>Cadena de plástico o aluminio | Motorizado</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Colores</strong><span>200+ tonos disponibles</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Aplicación</strong><span>Hogar, oficina, comercio</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Garantía</strong><span>1 año en mecanismo</span></div>
+                </div>
+            </div>
+            <div class="prod-full-tags">
+                <span>Minimalista</span><span>Fácil mantenimiento</span><span>Motorizable</span>
+            </div>
+            <a href="contacto.html?producto=enrollables" class="btn-gold">Cotizar este producto</a>
+        </div>
+    </div>
+
+    <!-- ── Sheer Elegance ── -->
+    <div class="producto-full-card reveal" id="sheer" data-cat="sheer">
+        <div class="prod-full-body">
+            <span class="section-label">Sofisticación & Versatilidad</span>
+            <h2>Sheer Elegance</h2>
+            <p class="prod-full-desc">El sistema de bandas alternas combina dos telas en uno: una traslúcida que permite el paso suave de la luz y una opaca que brinda privacidad total. Con un solo movimiento, decides cuánta luz y privacidad deseas. El producto preferido para salas y recámaras de lujo.</p>
+            <div class="prod-specs">
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Sistema</strong><span>Bandas alternas traslúcida/opaca</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Mecanismo</strong><span>Cadena con control de posición continua</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Acabado</strong><span>Premium con casete de aluminio</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Colores</strong><span>Paleta extensa en tonos neutros y vivos</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Aplicación</strong><span>Sala, recámara, comedor</span></div>
+                </div>
+            </div>
+            <div class="prod-full-tags">
+                <span>Dual control</span><span>Alta gama</span><span>Elegante</span>
+            </div>
+            <a href="contacto.html?producto=sheer" class="btn-gold">Cotizar este producto</a>
+        </div>
+        <div class="prod-full-img">
+            <img src="assets/products/sheer-elegance.png" alt="Sheer Elegance" loading="lazy">
+        </div>
+    </div>
+
+    <!-- ── Panel Japonés ── -->
+    <div class="producto-full-card reveal" id="panel" data-cat="panel">
+        <div class="prod-full-img">
+            <img src="assets/products/panel-japones.png" alt="Panel Japonés" loading="lazy">
+        </div>
+        <div class="prod-full-body">
+            <span class="section-label">Inspiración Oriental</span>
+            <h2>Panel Japonés</h2>
+            <p class="prod-full-desc">Diseñado para grandes ventanales y para dividir ambientes con elegancia. Los paneles se deslizan sobre rieles de aluminio de alta resistencia con un movimiento suave y silencioso. Inspiración japonesa que se adapta a la arquitectura contemporánea.</p>
+            <div class="prod-specs">
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Formato</strong><span>Paneles de 60cm a 100cm de ancho</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Rieles</strong><span>Aluminio anodizado de alta resistencia</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Telas</strong><span>Traslúcidas, screen, blackout | Intercambiables</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Alturas</strong><span>Hasta 3.5m sin empalme</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Aplicación</strong><span>Ventanales grandes, divisiones de ambientes</span></div>
+                </div>
+            </div>
+            <div class="prod-full-tags">
+                <span>Grandes ventanales</span><span>Divisor de espacios</span><span>Moderno</span>
+            </div>
+            <a href="contacto.html?producto=panel" class="btn-gold">Cotizar este producto</a>
+        </div>
+    </div>
+
+    <!-- ── Verticales PVC ── -->
+    <div class="producto-full-card reveal" id="vertical" data-cat="vertical">
+        <div class="prod-full-body">
+            <span class="section-label">Durabilidad Comercial</span>
+            <h2>Verticales PVC</h2>
+            <p class="prod-full-desc">La solución más resistente del mercado. Las lamas verticales de PVC soportan el sol intenso, la humedad y el uso diario intensivo sin deformarse ni decolorarse. La opción inteligente para oficinas, comercios y cualquier espacio de alto tráfico.</p>
+            <div class="prod-specs">
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Material</strong><span>PVC rígido de alta densidad</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Resistencia</strong><span>UV, humedad, manchas y golpes</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Apertura</strong><span>Total, parcial o en ángulo regulable</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Limpieza</strong><span>Solo paño húmedo, no requiere desmontaje</span></div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-check"></i>
+                    <div><strong>Aplicación</strong><span>Oficinas, comercios, industria</span></div>
+                </div>
+            </div>
+            <div class="prod-full-tags">
+                <span>Ultra resistente</span><span>Bajo mantenimiento</span><span>Comercial</span>
+            </div>
+            <a href="contacto.html?producto=vertical" class="btn-gold">Cotizar este producto</a>
+        </div>
+        <div class="prod-full-img">
+            <img src="assets/products/vertical-pvc.png" alt="Verticales PVC" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- GUÍA DE MEDICIÓN -->
+<section class="section section-medicion">
+    <div class="section-header reveal">
+        <span class="section-label">Sin complicaciones</span>
+        <h2 class="section-title">¿Cómo medir?</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Nosotros vamos a tu domicilio a medir sin costo. Pero si prefieres hacerlo tú, aquí tienes la guía.</p>
+    </div>
+    <div class="medicion-grid">
+        <div class="medicion-item reveal">
+            <div class="medicion-num">1</div>
+            <h4>Mide el ancho</h4>
+            <p>Mide de marco a marco en tres puntos: arriba, centro y abajo. Usa la medida más pequeña.</p>
+        </div>
+        <div class="medicion-item reveal">
+            <div class="medicion-num">2</div>
+            <h4>Mide el alto</h4>
+            <p>Mide desde donde colgarás el riel hasta donde quieres que termine la cortina. Izquierda, centro y derecha.</p>
+        </div>
+        <div class="medicion-item reveal">
+            <div class="medicion-num">3</div>
+            <h4>Anota el tipo de instalación</h4>
+            <p>¿Va dentro del vano o afuera? ¿En techo o en pared? Esto determina la colocación del soporte.</p>
+        </div>
+        <div class="medicion-item reveal">
+            <div class="medicion-num">4</div>
+            <h4>Envíanos las medidas</h4>
+            <p>Mándanos un WhatsApp con tus medidas y te enviamos cotización al instante. O agenda medición gratis.</p>
+        </div>
+    </div>
+    <div class="section-cta reveal">
+        <a href="https://wa.me/524778116501?text=Hola%2C%20quiero%20cotizar%20un%20producto%20de%20VELARE" target="_blank" class="btn-gold">
+            <i class="fab fa-whatsapp"></i> Enviar mis medidas por WhatsApp
+        </a>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-faq">
+    <div class="section-header reveal">
+        <span class="section-label">Preguntas frecuentes</span>
+        <h2 class="section-title">FAQ</h2>
+        <div class="section-line"></div>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item reveal">
+            <button class="faq-q" onclick="toggleFaq(this)">
+                ¿Cuánto tiempo tarda la fabricación e instalación?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+                <p>Generalmente entre 5 y 10 días hábiles desde la confirmación del pedido. Para proyectos grandes o con materiales especiales puede ser un poco más. Te informamos el plazo exacto al cotizar.</p>
+            </div>
+        </div>
+        <div class="faq-item reveal">
+            <button class="faq-q" onclick="toggleFaq(this)">
+                ¿Tienen servicio de motorización?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+                <p>Sí. Los Enrollables y el Sheer Elegance pueden equiparse con motor eléctrico compatible con control remoto o apps de smart home. Pregunta por esta opción al solicitar tu cotización.</p>
+            </div>
+        </div>
+        <div class="faq-item reveal">
+            <button class="faq-q" onclick="toggleFaq(this)">
+                ¿Qué garantía tienen los productos?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+                <p>Todos nuestros productos tienen garantía de 1 año en mecanismos y componentes. En caso de defecto de fabricación, lo reparamos o reemplazamos sin costo adicional.</p>
+            </div>
+        </div>
+        <div class="faq-item reveal">
+            <button class="faq-q" onclick="toggleFaq(this)">
+                ¿Hacen servicio a domicilio fuera de León?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+                <p>Principalmente atendemos León, Guanajuato y municipios cercanos (Silao, San Francisco del Rincón, Irapuato). Para otros municipios consúltanos disponibilidad.</p>
+            </div>
+        </div>
+        <div class="faq-item reveal">
+            <button class="faq-q" onclick="toggleFaq(this)">
+                ¿Puedo pedir muestras de telas antes de decidir?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+                <p>Por supuesto. Durante la visita de medición llevamos muestrario completo de telas y colores para que puedas ver y tocar cada opción en tu propio espacio antes de confirmar el pedido.</p>
+            </div>
+        </div>
+        <div class="faq-item reveal">
+            <button class="faq-q" onclick="toggleFaq(this)">
+                ¿Tienen opciones para presupuestos ajustados?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+                <p>Sí. Tenemos productos en diferentes rangos de precio sin sacrificar calidad. Las Verticales PVC y ciertos Enrollables son excelentes opciones para presupuestos más ajustados. Contáctanos y encontramos la solución ideal para ti.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section-cta-band">
+    <div class="cta-band-content reveal">
+        <h2>¿Tienes alguna duda?</h2>
+        <p>Nuestros asesores responden en minutos. Sin compromiso de compra.</p>
+        <div class="cta-band-btns">
+            <a href="https://wa.me/524778116501" target="_blank" class="btn-gold"><i class="fab fa-whatsapp"></i> Chatear ahora</a>
+            <a href="contacto.html" class="btn-outline-light">Formulario de contacto</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <p class="footer-brand">Vel<span>are</span></p>
+            <p class="footer-tagline">Cortinas & Persianas Premium</p>
+            <p class="footer-sub">Una empresa de <strong>Grupo P-ONCE</strong></p>
+        </div>
+        <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Productos</h4>
+            <ul>
+                <li><a href="#enrollables">Enrollables</a></li>
+                <li><a href="#sheer">Sheer Elegance</a></li>
+                <li><a href="#panel">Panel Japonés</a></li>
+                <li><a href="#vertical">Verticales PVC</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Blvd. Campestre 2910 L10<br>León, Guanajuato</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:4778116501">477 811 6501</a></p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/GrupoP11" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/grupo.p11/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/524778116501" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 VELARE. Todos los derechos reservados. | <span class="footer-link" onclick="openModal()">Aviso de Privacidad</span></p>
+    </div>
+</footer>
+
+<a href="https://wa.me/524778116501" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<div class="cookie-banner" id="cookieBanner">
+    <p>Utilizamos cookies para mejorar tu experiencia.</p>
+    <button onclick="acceptCookies()">Aceptar</button>
+</div>
+<div id="privacyModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h2>Aviso de Privacidad</h2>
+        <p><strong>VELARE — Grupo P-ONCE</strong> es responsable de sus datos personales conforme a la LFPDPPP.</p>
+        <p><strong>Derechos ARCO:</strong> jpepeponce200903@gmail.com</p>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+// ── Filtro de productos ──
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        document.querySelectorAll('.producto-full-card').forEach(card => {
+            const show = filter === 'all' || card.dataset.cat === filter;
+            card.style.display = show ? 'grid' : 'none';
+        });
+    });
+});
+
+// Scroll a producto si viene con #hash
+window.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash) {
+        const el = document.querySelector(window.location.hash);
+        if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 300);
+    }
+    // Pre-seleccionar filtro si hay hash
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+        const btn = document.querySelector(`.filter-btn[data-filter="${hash}"]`);
+        if (btn) { btn.click(); }
+    }
+});
+
+// FAQ accordion
+function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+}
+
+// Pre-fill contacto form con producto
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const prod = params.get('producto');
+    if (prod) {
+        const names = { enrollables: 'Enrollables', sheer: 'Sheer Elegance', panel: 'Panel Japonés', vertical: 'Verticales PVC' };
+        sessionStorage.setItem('velareProducto', names[prod] || prod);
+    }
+});
+</script>
+</body>
+</html>
