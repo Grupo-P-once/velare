@@ -53,6 +53,7 @@
         <button class="gallery-btn" data-cat="oficina">Oficina</button>
         <button class="gallery-btn" data-cat="comedor">Comedor</button>
         <button class="gallery-btn" data-cat="cocina">Cocina</button>
+        <button class="gallery-btn" data-cat="video">Video</button>
     </div>
 
     <!-- Grid de galería -->
@@ -118,6 +119,18 @@
             </div>
         </div>
 
+        <div class="galeria-card galeria-card-video reveal" data-cat="video" onclick="openVideoModal()" role="button" tabindex="0" aria-label="Ver video: Instalación cortina">
+            <video class="galeria-video-preview" src="assets/gallery/cortina-instalacion.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="galeria-card-overlay">
+                <div class="galeria-card-info">
+                    <span class="galeria-card-cat">Instalación Real</span>
+                    <h3>Cortina — Recién Instalada</h3>
+                    <p>León, Guanajuato</p>
+                </div>
+                <div class="galeria-play-btn"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+
     </div>
 
     <div id="noResults" class="no-results" style="display:none;">
@@ -140,6 +153,19 @@
         </div>
     </div>
     <button class="lightbox-nav lightbox-next" onclick="lightboxNext()" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<!-- VIDEO MODAL -->
+<div id="videoModal" class="video-modal" role="dialog" aria-modal="true">
+    <button class="video-modal-close" onclick="closeVideoModal()" aria-label="Cerrar">&times;</button>
+    <div class="video-modal-inner">
+        <video id="modalVideo" src="assets/gallery/cortina-instalacion.mp4" controls playsinline></video>
+        <div class="video-modal-caption">
+            <span class="lightbox-cat">Instalación Real</span>
+            <h3>Cortina — Recién Instalada</h3>
+            <p>León, Guanajuato</p>
+        </div>
+    </div>
 </div>
 
 <!-- CTA -->
@@ -280,6 +306,33 @@ document.addEventListener('keydown', e => {
 });
 document.querySelectorAll('.galeria-card').forEach(card => {
     card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') card.click(); });
+});
+
+// ── Video hover preview ──
+const videoCard = document.querySelector('.galeria-card-video');
+const videoPreview = document.querySelector('.galeria-video-preview');
+if (videoCard && videoPreview) {
+    videoCard.addEventListener('mouseenter', () => videoPreview.play());
+    videoCard.addEventListener('mouseleave', () => { videoPreview.pause(); videoPreview.currentTime = 0; });
+}
+
+// ── Video modal ──
+function openVideoModal() {
+    document.getElementById('videoModal').classList.add('active');
+    document.getElementById('modalVideo').play();
+    document.body.style.overflow = 'hidden';
+}
+function closeVideoModal() {
+    document.getElementById('videoModal').classList.remove('active');
+    const v = document.getElementById('modalVideo');
+    v.pause(); v.currentTime = 0;
+    document.body.style.overflow = '';
+}
+document.getElementById('videoModal').addEventListener('click', e => {
+    if (e.target === document.getElementById('videoModal')) closeVideoModal();
+});
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && document.getElementById('videoModal').classList.contains('active')) closeVideoModal();
 });
 </script>
 </body>
