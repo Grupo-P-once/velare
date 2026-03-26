@@ -290,33 +290,18 @@ a {
 /* ── Logo completo en hero ── */
 .hero-logo {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 18px;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
     animation: fadeUp 1s ease both;
     animation-delay: 0.1s;
 }
 
 .hero-logo img {
-    height: 80px;
-    width: auto;
+    width: 340px;
+    max-width: 80vw;
+    height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 0 18px rgba(212,175,55,0.35));
-}
-
-.hero-logo-text {
-    font-family: var(--font-heading);
-    font-size: 2.8rem;
-    font-weight: 500;
-    letter-spacing: 12px;
-    text-transform: uppercase;
-    color: var(--white);
-    line-height: 1;
-}
-
-.hero-logo-text span {
-    color: var(--gold);
+    filter: drop-shadow(0 4px 24px rgba(212,175,55,0.25));
 }
 
 .hero-tagline {
