@@ -287,21 +287,26 @@ a {
     padding: 0 5%;
 }
 
-/* ── Logo completo en hero ── */
+/* ── Logo wordmark en hero ── */
 .hero-logo {
     display: flex;
     justify-content: center;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     animation: fadeUp 1s ease both;
     animation-delay: 0.1s;
 }
 
-.hero-logo img {
-    width: 340px;
-    max-width: 80vw;
-    height: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 4px 24px rgba(212,175,55,0.25));
+.hero-wordmark {
+    font-family: 'Cinzel', 'Trajan Pro', Georgia, serif;
+    font-size: clamp(3.2rem, 10vw, 7.5rem);
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    color: #c9a848;
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow:
+        0 0 40px rgba(201,168,72,0.3),
+        0 2px 8px rgba(0,0,0,0.5);
 }
 
 .hero-tagline {
