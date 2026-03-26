@@ -197,42 +197,92 @@ a {
     align-items: center;
     text-align: center;
     overflow: hidden;
+    background: #0d0b08;
 }
 
-.hero-spline {
+/* ── Fondo elegante del hero ── */
+.hero-bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     z-index: 0;
+    overflow: hidden;
 }
 
-.hero-spline spline-viewer {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.hero-overlay {
+/* Cortinas laterales con gradiente de tela */
+.hero-bg-curtain {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    width: 38%;
     height: 100%;
+}
+.hero-bg-curtain-left {
+    left: 0;
     background: linear-gradient(
-        180deg,
-        rgba(58, 58, 58, 0.4) 0%,
-        rgba(58, 58, 58, 0.2) 40%,
-        rgba(58, 58, 58, 0.6) 80%,
-        rgba(58, 58, 58, 0.95) 100%
+        100deg,
+        #1a1208 0%,
+        #221a0a 30%,
+        #1a1208 55%,
+        #120e06 70%,
+        transparent 100%
+    );
+    /* pliegues de tela */
+    mask-image: linear-gradient(to right, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 60%, transparent 100%);
+}
+.hero-bg-curtain-right {
+    right: 0;
+    background: linear-gradient(
+        260deg,
+        #1a1208 0%,
+        #221a0a 30%,
+        #1a1208 55%,
+        #120e06 70%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(to left, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%);
+}
+
+/* Efecto de luz dorada centrada (como un foco sobre el escenario) */
+.hero-bg-glow {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 70% 55% at 50% 30%, rgba(212,175,55,0.13) 0%, transparent 70%),
+        radial-gradient(ellipse 100% 80% at 50% 0%, rgba(180,140,30,0.08) 0%, transparent 60%);
+}
+
+/* Pliegues de cortina decorativos (líneas verticales sutiles) */
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 28px,
+        rgba(212, 175, 55, 0.025) 28px,
+        rgba(212, 175, 55, 0.025) 30px
     );
     z-index: 1;
 }
 
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(13, 11, 8, 0.15) 0%,
+        rgba(13, 11, 8, 0.0)  40%,
+        rgba(13, 11, 8, 0.5)  75%,
+        rgba(13, 11, 8, 0.92) 100%
+    );
+    z-index: 2;
+}
+
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     max-width: 800px;
     padding: 0 5%;
 }
@@ -301,7 +351,7 @@ a {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
