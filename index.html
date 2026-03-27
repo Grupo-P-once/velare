@@ -163,17 +163,64 @@
     </div>
 </section>
 
-<!-- ══════════════════════════════════════ 3D SHOWCASE ══ -->
-<section class="section-showcase">
-    <div class="showcase-spline">
-        <spline-viewer url="https://prod.spline.design/PuVWMEawInDEo-lG/scene.splinecode" loading-anim-type="spinner-big-dark"></spline-viewer>
+<!-- ══════════════════════════════════════ VISUALIZADOR ══ -->
+<section class="section section-visualizador">
+    <div class="section-header reveal">
+        <span class="section-label">Visualizador de Ambientes</span>
+        <h2 class="section-title">¿Cómo queda en tu espacio?</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Selecciona el tipo de espacio y descubre qué cortina le va mejor.</p>
     </div>
-    <div class="showcase-overlay">
-        <div class="showcase-text">
-            <h2>Diseño en 3D</h2>
-            <p>Interactúa con la escena — Arrastra para explorar</p>
+
+    <div class="viz-tabs reveal">
+        <button class="viz-tab active" data-room="sala"><i class="fas fa-couch"></i> Sala</button>
+        <button class="viz-tab" data-room="recamara"><i class="fas fa-bed"></i> Recámara</button>
+        <button class="viz-tab" data-room="oficina"><i class="fas fa-briefcase"></i> Oficina</button>
+        <button class="viz-tab" data-room="comedor"><i class="fas fa-utensils"></i> Comedor</button>
+        <button class="viz-tab" data-room="cocina"><i class="fas fa-blender"></i> Cocina</button>
+    </div>
+
+    <div class="viz-stage reveal">
+        <div class="viz-img-wrap">
+            <img id="vizImg" src="assets/gallery/living-room.png" alt="Sala de Estar con Sheer Elegance">
+            <div class="viz-badge">
+                <span class="viz-badge-cat" id="vizCat">Sala de Estar</span>
+                <strong id="vizCurtain">Sheer Elegance</strong>
+                <span id="vizColor">Blanco Hueso</span>
+            </div>
+        </div>
+        <div class="viz-info">
+            <div class="viz-info-icon"><i class="fas fa-layer-group"></i></div>
+            <div>
+                <p id="vizDesc">Bandas alternas que filtran la luz natural con elegancia. Ideal para crear ambientes luminosos con privacidad.</p>
+                <a href="contacto.html" class="btn-gold viz-cta">Quiero esto en mi hogar</a>
+            </div>
         </div>
     </div>
+
+    <script>
+    const vizData = {
+        sala:     { img: 'assets/gallery/living-room.png', room: 'Sala de Estar',  curtain: 'Sheer Elegance',       color: 'Blanco Hueso', desc: 'Bandas alternas que filtran la luz natural con elegancia. Ideal para crear ambientes luminosos con privacidad.' },
+        recamara: { img: 'assets/gallery/bedroom.png',     room: 'Recámara',       curtain: 'Enrollable Blackout',   color: 'Gris Marengo', desc: 'Control total de luz para un descanso perfecto. Bloquea hasta el 100% de la luz exterior.' },
+        oficina:  { img: 'assets/gallery/office.png',      room: 'Oficina',        curtain: 'Verticales PVC',        color: 'Blanco Nieve', desc: 'Funcionalidad y durabilidad para espacios de trabajo. Fácil mantenimiento y resistencia a la humedad.' },
+        comedor:  { img: 'assets/gallery/dining.png',      room: 'Comedor',        curtain: 'Panel Japonés',         color: 'Beige Arena',  desc: 'Elegancia minimalista para ventanales amplios. Movimiento suave y diseño limpio que enmarca el espacio.' },
+        cocina:   { img: 'assets/gallery/kitchen.png',     room: 'Cocina',         curtain: 'Enrollable Screen 5%',  color: 'Gris Perla',   desc: 'Visión al exterior con privacidad y control solar. Tela técnica que reduce el calor sin perder la vista.' },
+    };
+    document.querySelectorAll('.viz-tab').forEach(btn => {
+        btn.addEventListener('click', function () {
+            document.querySelectorAll('.viz-tab').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const d = vizData[this.dataset.room];
+            const img = document.getElementById('vizImg');
+            img.style.opacity = '0';
+            setTimeout(() => { img.src = d.img; img.alt = d.room; img.style.opacity = '1'; }, 200);
+            document.getElementById('vizCat').textContent     = d.room;
+            document.getElementById('vizCurtain').textContent = d.curtain;
+            document.getElementById('vizColor').textContent   = d.color;
+            document.getElementById('vizDesc').textContent    = d.desc;
+        });
+    });
+    </script>
 </section>
 
 <!-- ══════════════════════════════════════ STATS ══ -->
