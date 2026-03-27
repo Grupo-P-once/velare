@@ -65,7 +65,6 @@
                 <div class="galeria-card-info">
                     <span class="galeria-card-cat">Sala de Estar</span>
                     <h3>Sheer Elegance Blanco Hueso</h3>
-                    <p>Residencial — Cañada del Refugio</p>
                 </div>
                 <i class="fas fa-expand-alt galeria-card-icon"></i>
             </div>
@@ -77,7 +76,6 @@
                 <div class="galeria-card-info">
                     <span class="galeria-card-cat">Recámara</span>
                     <h3>Enrollable Blackout Gris</h3>
-                    <p>Residencial — Lomas del Campestre</p>
                 </div>
                 <i class="fas fa-expand-alt galeria-card-icon"></i>
             </div>
@@ -89,7 +87,6 @@
                 <div class="galeria-card-info">
                     <span class="galeria-card-cat">Oficina</span>
                     <h3>Verticales PVC Blanco</h3>
-                    <p>Comercial — Blvd. Torres Landa</p>
                 </div>
                 <i class="fas fa-expand-alt galeria-card-icon"></i>
             </div>
@@ -101,7 +98,6 @@
                 <div class="galeria-card-info">
                     <span class="galeria-card-cat">Comedor</span>
                     <h3>Panel Japonés Beige</h3>
-                    <p>Residencial — Jardines del Moral</p>
                 </div>
                 <i class="fas fa-expand-alt galeria-card-icon"></i>
             </div>
@@ -113,18 +109,17 @@
                 <div class="galeria-card-info">
                     <span class="galeria-card-cat">Cocina</span>
                     <h3>Enrollable Screen 5%</h3>
-                    <p>Residencial — San Jerónimo</p>
                 </div>
                 <i class="fas fa-expand-alt galeria-card-icon"></i>
             </div>
         </div>
 
-        <div class="galeria-card galeria-card-video reveal" data-cat="video" onclick="openVideoModal()" role="button" tabindex="0" aria-label="Ver video: Instalación cortina">
-            <video class="galeria-video-preview" src="assets/gallery/cortina-instalacion.mp4" muted loop playsinline preload="metadata"></video>
+        <div class="galeria-card galeria-card-video reveal" data-cat="video" onclick="openVideoModal()" role="button" tabindex="0" aria-label="Ver video: Persiana Motorizada">
+            <video class="galeria-video-preview" src="assets/gallery/persiana-motorizada.mp4" muted loop playsinline preload="metadata"></video>
             <div class="galeria-card-overlay">
                 <div class="galeria-card-info">
                     <span class="galeria-card-cat">Instalación Real</span>
-                    <h3>Cortina — Recién Instalada</h3>
+                    <h3>Persiana Motorizada</h3>
                     <p>León, Guanajuato</p>
                 </div>
                 <div class="galeria-play-btn"><i class="fas fa-play"></i></div>
@@ -159,10 +154,10 @@
 <div id="videoModal" class="video-modal" role="dialog" aria-modal="true">
     <button class="video-modal-close" onclick="closeVideoModal()" aria-label="Cerrar">&times;</button>
     <div class="video-modal-inner">
-        <video id="modalVideo" src="assets/gallery/cortina-instalacion.mp4" controls playsinline></video>
+        <video id="modalVideo" src="assets/gallery/persiana-motorizada.mp4" controls playsinline muted></video>
         <div class="video-modal-caption">
             <span class="lightbox-cat">Instalación Real</span>
-            <h3>Cortina — Recién Instalada</h3>
+            <h3>Persiana Motorizada</h3>
             <p>León, Guanajuato</p>
         </div>
     </div>
@@ -239,11 +234,11 @@
 <script src="js/main.js"></script>
 <script>
 const galleryData = [
-    { src: 'assets/gallery/living-room.png', cat: 'Sala de Estar',  title: 'Sheer Elegance Blanco Hueso',   place: 'Residencial — Cañada del Refugio',   filter: 'sala' },
-    { src: 'assets/gallery/bedroom.png',     cat: 'Recámara',        title: 'Enrollable Blackout Gris',       place: 'Residencial — Lomas del Campestre',  filter: 'recamara' },
-    { src: 'assets/gallery/office.png',      cat: 'Oficina',         title: 'Verticales PVC Blanco',          place: 'Comercial — Blvd. Torres Landa',     filter: 'oficina' },
-    { src: 'assets/gallery/dining.png',      cat: 'Comedor',         title: 'Panel Japonés Beige',            place: 'Residencial — Jardines del Moral',   filter: 'comedor' },
-    { src: 'assets/gallery/kitchen.png',     cat: 'Cocina',          title: 'Enrollable Screen 5%',           place: 'Residencial — San Jerónimo',         filter: 'cocina' }
+    { src: 'assets/gallery/living-room.png', cat: 'Sala de Estar', title: 'Sheer Elegance Blanco Hueso', filter: 'sala' },
+    { src: 'assets/gallery/bedroom.png',     cat: 'Recámara',      title: 'Enrollable Blackout Gris',    filter: 'recamara' },
+    { src: 'assets/gallery/office.png',      cat: 'Oficina',       title: 'Verticales PVC Blanco',       filter: 'oficina' },
+    { src: 'assets/gallery/dining.png',      cat: 'Comedor',       title: 'Panel Japonés Beige',         filter: 'comedor' },
+    { src: 'assets/gallery/kitchen.png',     cat: 'Cocina',        title: 'Enrollable Screen 5%',        filter: 'cocina' }
 ];
 let visibleIndices = galleryData.map((_, i) => i);
 let currentLightboxIndex = 0;
@@ -292,7 +287,7 @@ function updateLightbox() {
     document.getElementById('lightboxImg').alt = d.title;
     document.getElementById('lightboxCat').textContent = d.cat;
     document.getElementById('lightboxTitle').textContent = d.title;
-    document.getElementById('lightboxPlace').textContent = d.place;
+    document.getElementById('lightboxPlace').textContent = d.place || '';
     document.getElementById('lightboxCounter').textContent = `${currentLightboxIndex + 1} / ${visibleIndices.length}`;
 }
 document.getElementById('lightbox').addEventListener('click', e => {
